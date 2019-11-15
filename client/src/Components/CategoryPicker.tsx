@@ -20,9 +20,9 @@ class CategoryPicker extends Component<Props, State>{
     this.transactionService = new TransactionService();
     this.state = {
       allTransactions: [
-        { isBijschrijving: true, omschrijving: "Money4U", bedrag: 5, datum: "15-04", categorie: "" },
-        { isBijschrijving: false, omschrijving: "Money4Drinks", bedrag: -7, datum: "17-04", categorie: "" },
-        { isBijschrijving: false, omschrijving: "Money4Games", bedrag: -3, datum: "13-04", categorie: "" },
+        { isBijschrijving: true, omschrijving: "Money4U", bedrag: 5, datum: "15-04", categorie: "", naamTegenpartij: "The Bank", naamUiteindelijkePartij: "" },
+        { isBijschrijving: false, omschrijving: "Money4Drinks", bedrag: -7, datum: "17-04", categorie: "", naamTegenpartij: "The Bank", naamUiteindelijkePartij: "" },
+        { isBijschrijving: false, omschrijving: "Money4Games", bedrag: -3, datum: "13-04", categorie: "", naamTegenpartij: "The Bank", naamUiteindelijkePartij: "" },
       ],
       currentTransaction: 0
     }

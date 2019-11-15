@@ -13,7 +13,7 @@ export default class transactionParser{
       let rawTransactions: string[] = input.split("\n");
   
       for(let i = 1; i < rawTransactions.length; i++){
-        let transaction = new Transaction(rawTransactions[i]); 
+        let transaction = new Transaction(rawTransactions[i]);
         that.wellFormedTransactions.push(transaction);
       }
     }
