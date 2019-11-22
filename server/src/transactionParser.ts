@@ -10,11 +10,15 @@ export default class transactionParser{
     let that = this;
 
     return function(err: Error, input: string){
-      let rawTransactions: string[] = input.split("\n");
-  
-      for(let i = 1; i < rawTransactions.length; i++){
-        let transaction = new Transaction(rawTransactions[i]);
-        that.wellFormedTransactions.push(transaction);
+      if(input && input.length > 0){
+        let rawTransactions: string[] = input.split("\n");
+        
+        for(let i = 1; i < rawTransactions.length; i++){
+          let transaction = new Transaction(rawTransactions[i]);
+          that.wellFormedTransactions.push(transaction);
+        }
+      } else{
+        console.log("No input.txt file found");
       }
     }
   }

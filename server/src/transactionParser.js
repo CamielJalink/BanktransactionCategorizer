@@ -11,10 +11,15 @@ var transactionParser = /** @class */ (function () {
     transactionParser.prototype.makeFunc = function () {
         var that = this;
         return function (err, input) {
-            var rawTransactions = input.split("\n");
-            for (var i = 1; i < rawTransactions.length; i++) {
-                var transaction = new transaction_1["default"](rawTransactions[i]);
-                that.wellFormedTransactions.push(transaction);
+            if (input && input.length > 0) {
+                var rawTransactions = input.split("\n");
+                for (var i = 1; i < rawTransactions.length; i++) {
+                    var transaction = new transaction_1["default"](rawTransactions[i]);
+                    that.wellFormedTransactions.push(transaction);
+                }
+            }
+            else {
+                console.log("No input.txt file found");
             }
         };
     };
