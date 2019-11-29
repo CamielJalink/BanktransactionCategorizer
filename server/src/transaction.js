@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Transaction = /** @class */ (function () {
     function Transaction(raw) {
         this.categorie = "";
@@ -19,7 +19,7 @@ var Transaction = /** @class */ (function () {
     }
     return Transaction;
 }());
-exports["default"] = Transaction;
+exports.default = Transaction;
 // 9 - Tegenrekenngnummer
 // (en dus array[9]) 10- Naam tegenpartij
 // 11- Naam uiteindelijke partij  (? nodig ?)

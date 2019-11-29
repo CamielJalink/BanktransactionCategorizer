@@ -1,10 +1,8 @@
-import transactionParser from "./src/transactionParser";
+import parseTransactions from "./src/transactionParser";
 import Transaction from "./src/transaction";
-const express = require("express");
+import express from "express";
 const app = express();
 const port = 8080;
-
-let parser = new transactionParser();
 
 app.get( "/", ( req, res ) => {
   res.send( "Hello world!" );
@@ -12,8 +10,12 @@ app.get( "/", ( req, res ) => {
 
 
 app.get( "/transactions", ( req, res ) => {
-  let wellFormedtransactions: Transaction[] = parser.getTransactions();
-  res.send(wellFormedtransactions);
+  
+  return parseTransactions().then( (wellFormedTransactions: Transaction[]) => {
+    res.send(wellFormedTransactions);
+  }).catch((error: Error) => {
+    console.log(error);
+  });
 })
 
 
