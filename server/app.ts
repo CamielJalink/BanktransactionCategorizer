@@ -1,4 +1,4 @@
-import parseTransactions from "./src/transactionParser";
+import parseTransactions from "./src/parseTransactions";
 import Transaction from "./src/transaction";
 import express from "express";
 const app = express();
