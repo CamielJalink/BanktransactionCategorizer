@@ -1,5 +1,3 @@
-import BankTransaction from "../Types/bankTransaction";
-
 export default class TransactionService{
 
   getTransactions(){
@@ -10,8 +8,5 @@ export default class TransactionService{
       console.log("in de error catch gekomen");
       throw(error);
     })
-
-    // Probeer de transaction om te vormen tot een BankTransaction.
-    // return 1 of meerdere BankTransactions naar mijn parent.
   }
 }
