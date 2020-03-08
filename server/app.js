@@ -21,6 +21,7 @@ app.get("/transactions", function (req, res) {
     });
 });
 app.post("/savetransactions", function (req, res) {
+    console.log(req.body);
     return saveTransactions_1.default(req.body).then(function () {
         res.send("You did it!");
     });

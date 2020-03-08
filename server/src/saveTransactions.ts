@@ -5,7 +5,7 @@ import Transaction from "./transaction";
 export default function saveTransactions(transactions: Transaction[]){
 
   const promisiedWriteFile = promisify(writeFile);
-  console.log(transactions);
+  console.log("hello there");
 
   let JsonTransactions = JSON.stringify(transactions);
 

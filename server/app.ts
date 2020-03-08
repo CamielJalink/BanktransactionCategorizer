@@ -25,8 +25,10 @@ app.get( "/transactions", ( req, res ) => {
 
 app.post( "/savetransactions", ( req, res ) => {
 
+  console.log(req.body);
+
   return saveTransactions(req.body).then(() => {
-    res.send("You did it!");    
+    res.send("You did it!");
   });
 })
 
