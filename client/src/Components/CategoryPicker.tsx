@@ -34,6 +34,7 @@ class CategoryPicker extends Component<Props, State>{
     this.setCatVakantie = this.setCatVakantie.bind(this);
     this.setCatOverig = this.setCatOverig.bind(this);
     this.getTransactions = this.getTransactions.bind(this);
+    this.saveTransactions = this.saveTransactions.bind(this);
   }
 
 
@@ -90,6 +91,10 @@ class CategoryPicker extends Component<Props, State>{
     });
   }
 
+  saveTransactions(){
+    return this.transactionService.postTransactions(this.state.allTransactions);
+  }
+
   render(){
     return(
       <div>
@@ -105,6 +110,7 @@ class CategoryPicker extends Component<Props, State>{
         <br/>
         <br/>
         <button onClick={this.getTransactions}>Ophalen transacties</button>
+        <button onClick={this.saveTransactions}>Transacties opslaan</button>
       </div>
     )
   }
