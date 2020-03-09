@@ -9,7 +9,7 @@ var express_1 = __importDefault(require("express"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var app = express_1.default();
 var port = 8080;
-app.use(body_parser_1.default.json()); // Black magic...
+app.use(body_parser_1.default.json());
 app.get("/", function (req, res) {
     res.send("Hello world!");
 });

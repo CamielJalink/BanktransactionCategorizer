@@ -6,7 +6,7 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 8080;
-app.use(bodyParser.json()); // Black magic...
+app.use(bodyParser.json());
 
 app.get( "/", ( req, res ) => {
   res.send( "Hello world!" );
@@ -21,7 +21,6 @@ app.get( "/transactions", ( req, res ) => {
     console.log(error);
   });
 })
-
 
 app.post( "/savetransactions", ( req, res ) => {
 

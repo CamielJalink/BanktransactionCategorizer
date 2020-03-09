@@ -13,19 +13,18 @@ export default class TransactionService{
     })
   }
 
-  postTransactions(transactions: BankTransaction[]){
 
-    let test = {"hallo": "doei"};
-    let jsonTest = JSON.stringify(test);
+
+  postTransactions(transactions: BankTransaction[]){
 
     console.log(transactions);
 
     return fetch("http://localhost:3000/savetransactions", {
       method: 'POST',
       headers:{
-        'Content-Type': 'applications/json'
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({transactions})
+      body: JSON.stringify( {transactions} )
     }).then(() => {
       console.log("POST succesfull");
       return;
