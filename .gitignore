@@ -1,6 +1,5 @@
 server/input.txt
 server/node_modules
-server/data/transactions.json
 
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
